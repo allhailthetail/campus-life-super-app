@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Page Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MRU Student Support Site</title>
 
-    <!-- Icon, an actual icon file (16x16 or 32x32). -->
-    <link rel="icon" href="icon.ico" />
+    <!-- Icon, an actual icon file (16x16 or 32x32). (displays in Browser tab...) -->
+    <link rel="icon" href="img/english/index.ico" />
 
-    <!-- Stylesheets -->
+    <!-- Custom Style sheets -->
     <link rel="stylesheet" href="css/main.css" />
 
     <!-- Load bootstrap -->
@@ -14,57 +16,122 @@
   </head>
 
   <body>
+    <!-- Header to be reused... -->
     <header class="site-header">
-      <div class="branding">
-        <!-- Could be an <img> logo, an <h1>, or both -->
-          <a href="/" class="site-logo">
-            <img src="img/logo.svg" alt="Site Name logo" />
-          </a>
+      <!-- nav holds the Bootstrap offcanvas drop-down menu: -->
+      <nav class="navbar navbar-light bg-light fixed-top shadow-sm">
+        <div class="container-fluid">
 
-          <p class="tagline">A short site tagline or mission statement.</p>
-      </div>
+          <!-- Heading text on the top of the page... -->
+          <!-- ensure it's center-aligned/doubles as page title -->
+          <a class="navbar-brand position-absolute start-50 translate-middle-x" href="index.html">Student Support</a>
 
-      <nav class="site-nav">
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">link1</a></li>
-          <li><a href="">link2</a></li>
-          <li><a href="">link3</a></li>
-          <!-- Add more links as needed -->
-        </ul>
+          <!-- Clickable three-line hamburger toggle button for menu: -->
+          <button class="navbar-toggler" type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasNavbarTop"
+                  aria-controls="offcanvasNavbarTop">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
       </nav>
-    </header>
 
-    <!-- Main Content Area -->
+      <!-- Navigation drop-down content begin -->
+      <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasNavbarTop" aria-labelledby="offcanvasNavbarTopLabel" style="height: auto;">
+        <div class="offcanvas-header bg-light">
+          <h5 class="offcanvas-title" id="offcanvasNavbarTopLabel">Site Navigation</h5>
+          <!-- Add a close button on the left side of drop-down -->
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+          <!-- Drop-down listed content -->
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item"> <a class="nav-link" aria-current="page" href="index.html">Main Page</a> </li>
+              <li class="nav-item"> <a class="nav-link" href="timer.html">Pomodoro Timer</a></li>
+              <li class="nav-item"> <a class="nav-link" href="compsci-dep.html">Computer Science</a></li>
+              <li class="nav-item"> <a class="nav-link" href="economics-dep.html">Economics</a></li>
+              <li class="nav-item"> <a class="nav-link" href="english-dep.html">English</a></li>
+              <li class="nav-item"> <a class="nav-link" href="history-dep.html">History</a></li>
+              <li class="nav-item"> <a class="nav-link" href="math-dep.html">Mathematics</a></li>
+            </ul>
+          <!-- End - Drop-down listed content -->
+          </div>
+      </div>
+      <!-- End - Navigation drop-down content -->
+    </header>
+    <!-- Header to be reused... -->
+
+    <!-- Begin Main Content Area -->
     <main id="main-content">
+
+      <!-- Header section -->
       <section>
         <header>
-          <h1>Welcome to my site!</h1>
+          <h1>Welcome to MRU University's Support Site!</h1>
         </header>
-
-        <p>
-          <!-- Some stuff... -->
-        </p>
       </section>
 
+      <!-- Begin Photo Carousel: -->
+      <section>
+        <div class="container-fluid">
+          <!-- Scroll interval adjustable w/ data-bs-interval (ms) -->
+          <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
+
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100 carousel-img" src="img/english/temp_carousel_1.jpg" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100 carousel-img" src="img/english/temp_carousel_2.jpg" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100 carousel-img" src="img/english/temp_carousel_3.jpg" alt="Third slide">
+              </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- End Photo Carousel -->
+
+      <!-- Begin General content area: Buttons, APIs, etc, go below here: -->
+      <!-- todo... -->
+      <!-- End General content area -->
+
     </main>
+    <!-- End main content area -->
 
-    <!-- Footer -->
-    <footer class="site-footer">
-      <nav class="footer-nav" aria-label="Footer">
-        <ul>
-          <li><a href="">Privacy</a></li>
-          <li><a href="">Terms of Service</a></li>
-          <li><a href="">Sitemap</a></li>
-        </ul>
-      </nav>
+    <!-- Begin Footer - to be reused...-->
+    <footer class="bg-light text-center py-3 border-top">
+      <!-- Container... -->
+      <div>
+        <!-- Copyright & date -->
+        <p class="text-muted mb-0">&copy; 2025 Student Support Site | MRU University</p>
 
-      <p class="copyright">
-        <small>© <span id="year"></span> Your Site. All rights reserved.</small>
-      </p>
+        <div class="mt-1">
+          <a href="index.html" class="text-secondary text-decoration none small mx-2">Index</a>
+          <a href="#" class="text-secondary text-decoration none small mx-2">Contact Us</a>
+        </div>
+      </div>
     </footer>
+    <!-- End Footer -->
 
-    <!-- Connect to your script file here -->
+    <!-- Connect script file here -->
     <script src = "../js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
