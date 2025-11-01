@@ -27,3 +27,31 @@
     max-height: 50vh;
     left: 0;
 }
+
+/* Adjust navbar theme*/
+#offcanvasNavbarTop .nav-link {
+    color:#807D76; /* Darker grey for text visibility */
+}
+
+#offcanvasNavbarTop .nav-link:hover {
+    color: #000; /*Black on hover...*/
+}
+
+#offcanvasNavbarTop .nav-link:focus{
+    color: #000; /*Black on focus...*/
+}
+
+#offcanvasNavbarTop .nav-link.active {
+    color: #00A2D9; /*temp*/
+}
+/* End - Adjust navbar theme*/
+
+/*Custom footer styling:*/
+footer a{
+    color: #807D76; /*Mirror navbar styling*/
+}
+
+footer a:hover {
+    color: #000; /*Black on hover...*/
+}
+/*End - Custom footer styling:*/
