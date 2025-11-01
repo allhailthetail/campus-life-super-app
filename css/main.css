@@ -21,3 +21,9 @@
     object-fit: cover;
     width: 100%;
 }
+
+/* Prevents the offcanvas navbar from taking up the full screen */
+#offcanvasNavbarTop {
+    max-height: 50vh;
+    left: 0;
+}

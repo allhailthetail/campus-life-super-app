@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Student Support - Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MRU Student Support Site</title>
 
     <!-- Icon, an actual icon file (16x16 or 32x32). -->
     <link rel="icon" href="icon.ico" />
 
-    <!-- Stylesheets -->
+    <!-- Style sheets -->
     <link rel="stylesheet" href="css/main.css" />
 
     <!-- Load bootstrap -->
@@ -15,26 +17,47 @@
 
   <body>
     <header class="site-header">
-      <div class="branding">
-        <!-- Could be an <img> logo, an <h1>, or both -->
-          <a href="/" class="site-logo">
-            <img src="img/logo.svg" alt="Metropolitan Rural University logo" />
-          </a>
+      <!-- nav holds the Bootstrap offcanvas drop-down menu: -->
+      <nav class="navbar navbar-light bg-light fixed-top shadow-sm">
+        <div class="container-fluid">
 
-          <p class="tagline">MRU University Tagline</p>
-      </div>
+          <!-- Heading text on the top of the page... -->
+          <!-- ensure it's center-aligned/doubles as page title -->
+          <a class="navbar-brand position-absolute start-50 translate-middle-x" href="index.html">Student Support</a>
 
-      <nav class="site-nav">
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Pomodoro Timer</a></li>
-          <li><a href="">Mathematics Dept</a></li>
-          <li><a href="">English Dept</a></li>
-          <li><a href="">Computer Science Dept</a></li>
-          <li><a href="">History Dept</a></li>
-          <!-- Add more links as needed -->
-        </ul>
+          <!-- Clickable three-line hamburger toggle button for menu: -->
+          <button class="navbar-toggler" type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasNavbarTop"
+                  aria-controls="offcanvasNavbarTop">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
       </nav>
+
+      <!-- Navigation drop-down content begin -->
+      <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasNavbarTop" aria-labelledby="offcanvasNavbarTopLabel" style="height: auto;">
+        <div class="offcanvas-header bg-light">
+          <h5 class="offcanvas-title" id="offcanvasNavbarTopLabel">Site Navigation</h5>
+          <!-- Add a close button on the left side of drop-down -->
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+          <!-- Drop-down listed content -->
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item"> <a class="nav-link" aria-current="page" href="index.html">Main Page</a> </li>
+              <li class="nav-item"> <a class="nav-link" href="timer.html">Pomodoro Timer</a></li>
+              <li class="nav-item"> <a class="nav-link" href="compsci-dep.html">Computer Science</a></li>
+              <li class="nav-item"> <a class="nav-link" href="economics-dep.html">Economics</a></li>
+              <li class="nav-item"> <a class="nav-link" href="english-dep.html">English</a></li>
+              <li class="nav-item"> <a class="nav-link" href="history-dep.html">English</a></li>
+              <li class="nav-item"> <a class="nav-link" href="math-dep.html">Mathematics</a></li>
+            </ul>
+          <!-- End - Drop-down listed content -->
+          </div>
+      </div>
+      <!-- End - Navigation drop-down content -->
+
     </header>
 
     <!-- Main Content Area -->
@@ -90,7 +113,7 @@
     <footer class="site-footer">
       <nav class="footer-nav" aria-label="Footer">
         <ul>
-          <li><a href="">Not-so-provate Privacy Statement</a></li>
+          <li><a href="">Not-so-private Privacy Statement</a></li>
           <li><a href="">Terms of Service</a></li>
           <li><a href="">Nonexistent Sitemap</a></li>
         </ul>
