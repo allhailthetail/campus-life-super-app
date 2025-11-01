@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MRU Student Support Site</title>
 
-    <!-- Icon, an actual icon file (16x16 or 32x32). -->
-    <link rel="icon" href="icon.ico" />
+    <!-- Icon, an actual icon file (16x16 or 32x32). (displays in Browser tab...) -->
+    <link rel="icon" href="img/index/index.ico" />
 
-    <!-- Style sheets -->
+    <!-- Custom Style sheets -->
     <link rel="stylesheet" href="css/main.css" />
 
     <!-- Load bootstrap -->
@@ -16,6 +16,7 @@
   </head>
 
   <body>
+    <!-- Header to be reused... -->
     <header class="site-header">
       <!-- nav holds the Bootstrap offcanvas drop-down menu: -->
       <nav class="navbar navbar-light bg-light fixed-top shadow-sm">
@@ -57,10 +58,10 @@
           </div>
       </div>
       <!-- End - Navigation drop-down content -->
-
     </header>
+    <!-- Header to be reused... -->
 
-    <!-- Main Content Area -->
+    <!-- Begin Main Content Area -->
     <main id="main-content">
 
       <!-- Header section -->
@@ -73,7 +74,8 @@
       <!-- Begin Photo Carousel: -->
       <section>
         <div class="container-fluid">
-          <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
+          <!-- Scroll interval adjustable w/ data-bs-interval (ms) -->
+          <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
 
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -107,24 +109,29 @@
       </section>
       <!-- End Photo Carousel -->
 
+      <!-- Begin General content area: Buttons, APIs, etc, go below here: -->
+      <!-- todo... -->
+      <!-- End General content area -->
+
     </main>
+    <!-- End main content area -->
 
-    <!-- Footer -->
-    <footer class="site-footer">
-      <nav class="footer-nav" aria-label="Footer">
-        <ul>
-          <li><a href="">Not-so-private Privacy Statement</a></li>
-          <li><a href="">Terms of Service</a></li>
-          <li><a href="">Nonexistent Sitemap</a></li>
-        </ul>
-      </nav>
+    <!-- Begin Footer - to be reused...-->
+    <footer class="bg-light text-center py-3 border-top">
+      <!-- Container... -->
+      <div>
+        <!-- Copyright & date -->
+        <p class="text-muted mb-0">&copy; 2025 Student Support Site | MRU University</p>
 
-      <p class="copyright">
-        <small><span id="year"></span> MRU University. All rights reserved.</small>
-      </p>
+        <div class="mt-1">
+          <a href="index.html" class="text-secondary text-decoration none small mx-2">Index</a>
+          <a href="#" class="text-secondary text-decoration none small mx-2">Contact Us</a>
+        </div>
+      </div>
     </footer>
+    <!-- End Footer -->
 
-    <!-- Connect to your script file here -->
+    <!-- Connect script file here -->
     <script src = "../js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
