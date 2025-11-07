@@ -17,7 +17,9 @@
 
 /*Control the height of the images in the carousel:*/
 .carousel-img {
-    height: 400px;
+    height: 60vh; /* 60% of viewport height */
+    min-height: 400px; /* Minimum height on smaller screens */
+    max-height: 800px; /* Maximum height on larger screens */
     object-fit: cover;
     width: 100%;
 }
