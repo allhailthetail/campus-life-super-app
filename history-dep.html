@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">  
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -62,11 +62,11 @@
     <!-- Header to be reused... -->
 
     <!-- Begin Main Content Area -->
-    <main id="main-content">
+    <main id="main-content" class="mt-5 pt-3">
 
       <!-- Begin Photo Carousel: -->
       <section>
-        <div class="container-fluid">
+        <div class="container">
           <!-- Scroll interval adjustable w/ data-bs-interval (ms) -->
           <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
 
@@ -103,7 +103,96 @@
       <!-- End Photo Carousel -->
 
       <!-- Begin General content area: Buttons, APIs, etc, go below here: -->
-      <!-- todo... -->
+      <section id="resources-by-subject" class="mb-5">
+        <h2 class="text-center my-4">Top Resources:</h2>
+
+        <!-- Resources tiles container -->
+        <div class="container px-4 mb-5">
+
+          <!-- Lib of Congress Online -->
+          <div class="card bg-light shadow border mb-4">
+            <div class="card-body d-flex flex-column p-4">
+              <h5 class="card-title fw-bold mb-3">Library of Congress' Online Digital Collection</h5>
+              <p class="card-text">The largest library in the world, now at your fingertips</p>
+              <a href="https://www.loc.gov/collections/" class="stretched-link text-decoration-none text-dark"></a>
+            </div>
+          </div>
+
+          <!-- National Archives -->
+          <div class="card bg-light shadow border mb-4">
+            <div class="card-body d-flex flex-column p-4">
+              <h5 class="card-title fw-bold mb-3">National Archives</h5>
+              <p class="card-text">Various archived information spanning from pre-federal times to the present</p>
+              <a href="https://www.archives.gov/research" class="stretched-link text-decoration-none text-dark"></a>
+            </div>
+          </div>
+
+          <!-- Fordham History Texts -->
+          <div class="card bg-light shadow border mb-4">
+            <div class="card-body d-flex flex-column p-4">
+              <h5 class="card-title fw-bold mb-3">Fordham Internet Sourcebooks Project</h5>
+              <p class="card-text">Massive collection of freely-available literature on many historical topics</p>
+              <a href="https://sourcebooks.fordham.edu/" class="stretched-link text-decoration-none text-dark"></a>
+            </div>
+          </div>
+
+          <!-- Archive of European Heritage -->
+          <div class="card bg-light shadow border mb-4">
+            <div class="card-body d-flex flex-column p-4">
+              <h5 class="card-title fw-bold mb-3">European Cultural Heritage Project</h5>
+              <p class="card-text">Everything you need to know about old-world heritage</p>
+              <a href="https://www.europeana.eu/en" class="stretched-link text-decoration-none text-dark"></a>
+            </div>
+          </div>
+
+          <!-- Internet Archive -->
+          <div class="card bg-light shadow border mb-4">
+            <div class="card-body d-flex flex-column p-4">
+              <h5 class="card-title fw-bold mb-3">The Internet Archive</h5>
+              <p class="card-text">A non-profit library of millions of free texts, movies, software, music, and websites</p>
+              <a href="https:/archive.org" class="stretched-link text-decoration-none text-dark"></a>
+            </div>
+          </div>
+
+          <!-- Time maps - Visual history -->
+          <div class="card bg-light shadow border mb-4">
+            <div class="card-body d-flex flex-column p-4">
+              <h5 class="card-title fw-bold mb-3">Time Maps</h5>
+              <p class="card-text">Visualize world history over time with interactive maps</p>
+              <a href="https://timemaps.com" class="stretched-link text-decoration-none text-dark"></a>
+            </div>
+          </div>
+
+          <!-- Academic Calendar -->
+          <div class="card bg-light shadow border mb-4">
+            <div class="card-body d-flex flex-column p-4">
+              <h5 class="card-title fw-bold mb-3">Academic Calendar</h5>
+              <p class="card-text">Key dates and deadlines for the semester.</p>
+              <a href="#" class="stretched-link text-decoration-none text-dark"></a>
+            </div>
+          </div>
+
+          <!-- Pomodoro Timer -->
+          <div class="card bg-danger text-white shadow mb-4">
+            <div class="card-body d-flex flex-column p-4">
+              <h5 class="card-title fw-bold mb-3">Pomodoro Timer</h5>
+              <p class="card-text">Master your focus with the Pomodoro Timer</p>
+              <a href="timer.html" class="stretched-link text-decoration-none text-white"></a>
+            </div>
+          </div>
+
+          <!-- Quote of the Day -->
+          <div class="card bg-info text-dark shadow mb-4">
+            <div class="card-body d-flex flex-column p-4">
+              <h5 class="card-title fw-bold mb-3">Quote of the Day</h5>
+              <p id="history_quote_of_the_day" class="card-text">Loading daily wisdom...</p>
+              <a href="https://www.brainyquote.com/topics/inspirational-quotes" class="stretched-link text-decoration-none text-dark"></a>
+            </div>
+          </div>
+
+        </div>
+        <!-- End resources tiles container -->
+      </section>
       <!-- End General content area -->
 
     </main>
@@ -125,7 +214,7 @@
     <!-- End Footer -->
 
     <!-- Connect script file here -->
-    <script src = "../js/script.js"></script>
+    <script src = "js/quote_api.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
 </html>
