@@ -57,3 +57,9 @@ footer a:hover {
     color: #000; /*Black on hover...*/
 }
 /*End - Custom footer styling:*/
+
+/* Begin Body Styling */
+body {
+    background-color: AliceBlue;
+}
+/* End Body Styling */
