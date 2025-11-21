@@ -24,6 +24,10 @@
     width: 100%;
 }
 
+.navbar {
+    background-color: lightslategray;
+}
+
 /* Prevents the offcanvas navbar from taking up the full screen */
 #offcanvasNavbarTop {
     max-height: 50vh;
